@@ -42,11 +42,12 @@
   "config": {
     "native": false
   },
-  "main": "./index",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
   "directories": {
     "lib": "./lib/bson"
   },
-  "browser": "dist/bson.js",
   "engines": {
     "node": ">=4.0.0"
   },

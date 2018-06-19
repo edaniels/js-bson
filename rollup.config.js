@@ -5,11 +5,18 @@ import babel from 'rollup-plugin-babel';
 
 export default {
   input: 'index.js',
-  output: {
-    file: 'dist/bson.js',
-    format: 'umd',
-    name: 'bson',
-  },
+  output: [
+    {
+      file: 'dist/index.umd.js',
+      format: 'umd',
+      name: 'bson',
+    },
+    {
+      file: 'dist/index.esm.js',
+      format: 'es',
+      name: 'bson',
+    }
+  ],
   plugins: [
     nodeBuiltins(),
     nodeResolve(),
